@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My jwt_server</string>
+    <string name="content_description_end_icon">favorite</string>
+    <string name="str_login_btn">로그인하기</string>
+    <string name="str_login_page">로그인 페이지</string>
+    <string name="str_move_signup_page">아직 회원 가입이 안되어 있나요?</string>
+</resources>
