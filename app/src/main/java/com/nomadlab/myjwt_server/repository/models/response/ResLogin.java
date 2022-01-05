@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class Login {
+public class ResLogin {
 
     @SerializedName("code")
     @Expose
@@ -14,7 +14,7 @@ public class Login {
     private String msg;
     @SerializedName("data")
     @Expose
-    private Data data;
+    private ResData resData;
 
     public Integer getCode() {
         return code;
@@ -32,12 +32,12 @@ public class Login {
         this.msg = msg;
     }
 
-    public Data getData() {
-        return data;
+    public ResData getData() {
+        return resData;
     }
 
-    public void setData(Data data) {
-        this.data = data;
+    public void setData(ResData resData) {
+        this.resData = resData;
     }
 
 }

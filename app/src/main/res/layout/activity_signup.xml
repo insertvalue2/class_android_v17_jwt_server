@@ -6,4 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".SignupActivity">
 
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/signupPageName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_signup_page"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/signupTvLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signupTvLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toTopOf="@id/emailTvLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signupPageName"
+
+                app:startIconContentDescription="@string/content_description_end_icon"
+                app:startIconDrawable="@drawable/ic_baseline_favorite_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signupEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTvLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toTopOf="@id/signupPasswordTvLayout"
+                app:layout_constraintEnd_toEndOf="@id/signupTvLayout"
+                app:layout_constraintStart_toStartOf="@id/signupTvLayout"
+                app:layout_constraintTop_toBottomOf="@id/signupTvLayout"
+                app:startIconContentDescription="@string/content_description_end_icon"
+                app:startIconDrawable="@drawable/ic_baseline_favorite_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signupPasswordTvLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@id/checkPasswordTvLayout"
+                app:layout_constraintEnd_toEndOf="@id/signupTvLayout"
+                app:layout_constraintStart_toStartOf="@id/signupTvLayout"
+                app:layout_constraintTop_toBottomOf="@id/emailTvLayout"
+                app:startIconContentDescription="@string/content_description_end_icon"
+                app:startIconDrawable="@drawable/ic_baseline_favorite_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signupPasswordEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/checkPasswordTvLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/signupBtn"
+                app:layout_constraintEnd_toEndOf="@id/signupPasswordTvLayout"
+                app:layout_constraintStart_toStartOf="@id/signupPasswordTvLayout"
+                app:layout_constraintTop_toBottomOf="@id/signupPasswordTvLayout"
+                app:startIconContentDescription="@string/content_description_end_icon"
+                app:startIconDrawable="@drawable/ic_baseline_favorite_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/checkPasswordEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/signupBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/str_signup"
+                app:layout_constraintBottom_toTopOf="@id/moveSignupTv"
+                app:layout_constraintEnd_toEndOf="@id/signupPasswordTvLayout"
+                app:layout_constraintStart_toStartOf="@id/signupTvLayout"
+                app:layout_constraintTop_toBottomOf="@id/checkPasswordTvLayout" />
+
+            <TextView
+                android:id="@+id/moveSignupTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/str_move_login_page"
+                android:textColor="#2196F3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/signupTvLayout"
+                app:layout_constraintStart_toStartOf="@id/signupTvLayout"
+                app:layout_constraintTop_toBottomOf="@id/signupBtn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

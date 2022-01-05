@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class Data {
+public class ResData {
 
     @SerializedName("id")
     @Expose

@@ -2,7 +2,8 @@ package com.nomadlab.myjwt_server.repository;
 
 import com.nomadlab.myjwt_server.BuildConfig;
 import com.nomadlab.myjwt_server.repository.models.request.ReqLogin;
-import com.nomadlab.myjwt_server.repository.models.response.Login;
+import com.nomadlab.myjwt_server.repository.models.request.ReqSignup;
+import com.nomadlab.myjwt_server.repository.models.response.ResLogin;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +19,11 @@ public interface JwtService {
 
 
     @POST("login")
-    Call<Login> getLogin(@Body ReqLogin reqLogin);
+    Call<ResLogin> getLogin(@Body ReqLogin reqLogin);
+
+    @POST("join")
+    Call<ReqSignup> saveMember(@Body ReqSignup reqSignup);
+
 
 
     Retrofit retrofit = new Retrofit.Builder()

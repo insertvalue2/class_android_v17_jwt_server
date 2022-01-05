@@ -36,14 +36,14 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/loginTvLayout"
                 android:layout_width="0dp"
-
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
+                android:hint="input user id"
+                app:endIconMode="clear_text"
                 app:layout_constraintBottom_toTopOf="@id/passwordTvLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/loginPageName"
-
                 app:startIconContentDescription="@string/content_description_end_icon"
                 app:startIconDrawable="@drawable/ic_baseline_favorite_24">
 
@@ -60,10 +60,12 @@
                 android:id="@+id/passwordTvLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:hint="input user pw"
                 app:layout_constraintBottom_toTopOf="@id/loginBtn"
                 app:layout_constraintEnd_toEndOf="@id/loginTvLayout"
                 app:layout_constraintStart_toStartOf="@id/loginTvLayout"
                 app:layout_constraintTop_toBottomOf="@id/loginTvLayout"
+                app:passwordToggleEnabled="true"
                 app:startIconContentDescription="@string/content_description_end_icon"
                 app:startIconDrawable="@drawable/ic_baseline_favorite_24">
 
@@ -81,22 +83,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/str_login_btn"
-                app:layout_constraintBottom_toTopOf="@id/moveSignupTv"
+                app:layout_constraintBottom_toTopOf="@id/moveLoginTv"
                 app:layout_constraintEnd_toEndOf="@id/passwordTvLayout"
                 app:layout_constraintStart_toStartOf="@id/loginTvLayout"
                 app:layout_constraintTop_toBottomOf="@id/passwordTvLayout" />
 
             <TextView
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="@id/loginTvLayout"
-                app:layout_constraintEnd_toEndOf="@id/loginTvLayout"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/loginBtn"
-                android:id="@+id/moveSignupTv"
+                android:id="@+id/moveLoginTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="@string/str_move_signup_page"
-                android:textColor="#2196F3" />
+                android:textColor="#2196F3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/loginTvLayout"
+                app:layout_constraintStart_toStartOf="@id/loginTvLayout"
+                app:layout_constraintTop_toBottomOf="@id/loginBtn" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
