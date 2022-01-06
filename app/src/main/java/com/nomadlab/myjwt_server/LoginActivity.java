@@ -41,10 +41,14 @@ public class LoginActivity extends AppCompatActivity {
                     Log.d(TAG, "header : " + response.headers().get("Authorization"));
                     SharedPreferences preferences = getSharedPreferences("token", MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("key", response.headers().get("Authorization"));
+                    editor.putString("jwt", response.headers().get("Authorization"));
                     editor.apply();
                     ResLogin resLogin = response.body();
                     Snackbar.make(view, resLogin.getMsg(), Snackbar.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(view.getContext(), MainActivity.class);
+                    intent.putExtra("msg", resLogin.getMsg());
+                    startActivity(intent);
                 }
 
                 @Override

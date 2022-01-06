@@ -7,4 +7,10 @@
     <string name="str_signup_page">회원 가입 페이지</string>
     <string name="str_move_login_page">로그인 페이지도 이동하기</string>
     <string name="str_signup">회원가입하기</string>
+    <string name="text_label_1">list</string>
+    <string name="text_label_2">users</string>
+    <string name="text_label_3">web</string>
+    <string name="text_label_4">myInfo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

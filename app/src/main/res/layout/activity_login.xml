@@ -48,6 +48,7 @@
                 app:startIconDrawable="@drawable/ic_baseline_favorite_24">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:text="questzz1"
                     android:id="@+id/loginEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -70,6 +71,7 @@
                 app:startIconDrawable="@drawable/ic_baseline_favorite_24">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:text="5678"
                     android:id="@+id/passwordEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
